@@ -6,7 +6,7 @@
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/21 18:57:54 by dande-je          #+#    #+#             */
-/*   Updated: 2025/03/21 19:23:23 by dande-je         ###   ########.fr       */
+/*   Updated: 2025/03/21 20:21:06 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ class Animal {
  public:
   Animal();
   Animal(const std::string& type);
-  Animal(Animal const& other);
+  Animal(const Animal& other);
   virtual ~Animal();
 
   Animal& operator=(const Animal& other);
