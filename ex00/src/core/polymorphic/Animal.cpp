@@ -6,7 +6,7 @@
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/21 16:11:11 by dande-je          #+#    #+#             */
-/*   Updated: 2025/03/21 19:31:45 by dande-je         ###   ########.fr       */
+/*   Updated: 2025/03/22 17:59:32 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ Animal::Animal(const std::string& type)
   log("Default animal parameterized constructor called");
 }
 
-Animal::Animal(Animal const& other)
+Animal::Animal(const Animal& other)
   : m_type(other.m_type),
     m_color(TerminalColor::getInstance()),
     m_bgColor(BG_WHITE),
