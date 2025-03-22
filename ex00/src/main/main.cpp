@@ -6,7 +6,7 @@
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/20 19:01:56 by dande-je          #+#    #+#             */
-/*   Updated: 2025/03/22 18:25:26 by dande-je         ###   ########.fr       */
+/*   Updated: 2025/03/22 19:51:30 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,16 @@ int main() {
     kazul->makeSound();
     std::cout << "Animal type is: " << kazul->getType() << std::endl;
     delete kazul;
+  }
+  std::cout << std::endl << "---------------------------------------------------" << std::endl << std::endl;
+  {
+    Cat meliante;
+    Cat kazul;
+
+    kazul = meliante;
+    std::cout << "this animal make sound: ";
+    kazul.makeSound();
+    std::cout << "Animal type is: " << kazul.getType() << std::endl;
   }
   return EXIT_SUCCESS;
 }
