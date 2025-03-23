@@ -6,7 +6,7 @@
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/21 19:16:29 by dande-je          #+#    #+#             */
-/*   Updated: 2025/03/22 20:28:29 by dande-je         ###   ########.fr       */
+/*   Updated: 2025/03/22 21:05:37 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <iostream>
 
 void WrongAnimal::makeSound() const {
-  log("WrongAnimal sound");
+  log("WrongAnimal muted");
 }
 
 std::string WrongAnimal::getType() const {
