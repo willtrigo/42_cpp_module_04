@@ -6,7 +6,7 @@
 #    By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/03/22 22:34:35 by dande-je          #+#    #+#              #
-#    Updated: 2025/03/23 09:36:47 by dande-je         ###   ########.fr        #
+#    Updated: 2025/03/23 10:47:23 by dande-je         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,6 +30,7 @@ SRCS_MAIN_DIR                   := $(SRCS_DIR)main/
 SRCS_CORE_DIR                   := $(SRCS_DIR)core/
 SRCS_ANIMAL_DIR                 := $(SRCS_CORE_DIR)animal/
 SRCS_TYPE_DIR                   := $(SRCS_ANIMAL_DIR)type/
+SRCS_BRAIN_DIR                  := $(SRCS_TYPE_DIR)brain/
 SRCS_UTILS_DIR                  := $(SRCS_DIR)utils/
 INCS                            := src/
 BIN_DIR                         := bin/
@@ -58,6 +59,8 @@ SRCS_FILES                      += $(addprefix $(SRCS_TYPE_DIR), Cat.cpp \
 								   CatUtility.cpp \
 								   Dog.cpp \
 								   DogUtility.cpp)
+SRCS_FILES                      += $(addprefix $(SRCS_BRAIN_DIR), Brain.cpp \
+								   BrainUtility.cpp)
 SRCS_FILES                      += $(addprefix $(SRCS_UTILS_DIR), TerminalColor.cpp \
 								   TerminalColorUtility.cpp)
 

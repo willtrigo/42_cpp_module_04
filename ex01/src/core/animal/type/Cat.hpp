@@ -6,7 +6,7 @@
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/23 09:17:24 by dande-je          #+#    #+#             */
-/*   Updated: 2025/03/23 09:17:52 by dande-je         ###   ########.fr       */
+/*   Updated: 2025/03/23 10:22:35 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 #define CAT_HPP
 
 #include "core/animal/Animal.hpp"
+#include "core/animal/type/brain/Brain.hpp"
 
 class Cat : public Animal {
  public:
@@ -24,6 +25,10 @@ class Cat : public Animal {
   Cat& operator=(const Cat& other);
 
   void makeSound() const;
+  Brain* getBrain() const;
+
+ private:
+  Brain* m_brain;
 };
 
 #endif // CAT_HPP

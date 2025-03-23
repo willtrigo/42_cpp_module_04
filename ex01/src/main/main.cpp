@@ -6,7 +6,7 @@
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/22 22:34:53 by dande-je          #+#    #+#             */
-/*   Updated: 2025/03/23 09:35:03 by dande-je         ###   ########.fr       */
+/*   Updated: 2025/03/23 11:04:03 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,63 +18,35 @@
 
 int main() {
   {
-    Animal ant;
+    const int totalAnimals = 4;
+    Animal* animals[totalAnimals];
 
-    std::cout << "this animal make sound: ";
-    ant.makeSound();
-    std::cout << "Animal type is: " << ant.getType() << std::endl;
+    for (int i = 0; i < totalAnimals / 2; ++i) {
+      animals[i] = new Cat();
+    }
+    for (int i = totalAnimals / 2; i < totalAnimals; ++i) {
+      animals[i] = new Dog();
+    }
+
+    for (int i = 0; i < totalAnimals; ++i) {
+      delete animals[i];
+    }
   }
   std::cout << std::endl << "---------------------------------------------------" << std::endl << std::endl;
   {
     Cat kazul;
-    std::cout << "this animal make sound: ";
-    kazul.makeSound();
-    std::cout << "Animal type is: " << kazul.getType() << std::endl;
-  }
-  std::cout << std::endl << "---------------------------------------------------" << std::endl << std::endl;
-  {
-    Cat meliante;
-    Animal* kazul = new Cat(meliante);
-    std::cout << "this animal make sound: ";
-    kazul->makeSound();
-    std::cout << "Animal type is: " << kazul->getType() << std::endl;
-    delete kazul;
-  }
-  std::cout << std::endl << "---------------------------------------------------" << std::endl << std::endl;
-  {
-    Cat meliante;
-    Cat kazul;
-
-    kazul = meliante;
-    std::cout << "this animal make sound: ";
-    kazul.makeSound();
-    std::cout << "Animal type is: " << kazul.getType() << std::endl;
+    kazul.getBrain()->setIdea(9, "Should i meow uncontrollably??");
+    Cat crocodile = kazul;
+    std::cout << "Idea from kazul: " << kazul.getBrain()->getIdea(9) << std::endl;
+    std::cout << "Idea from crocodile: " << crocodile.getBrain()->getIdea(9) << std::endl;
   }
   std::cout << std::endl << "---------------------------------------------------" << std::endl << std::endl;
   {
     Dog doge;
-    std::cout << "this animal make sound: ";
-    doge.makeSound();
-    std::cout << "Animal type is: " << doge.getType() << std::endl;
-  }
-  std::cout << std::endl << "---------------------------------------------------" << std::endl << std::endl;
-  {
-    Dog meliante;
-    Animal* doge = new Dog(meliante);
-    std::cout << "this animal make sound: ";
-    doge->makeSound();
-    std::cout << "Animal type is: " << doge->getType() << std::endl;
-    delete doge;
-  }
-  std::cout << std::endl << "---------------------------------------------------" << std::endl << std::endl;
-  {
-    Dog meliante;
-    Dog doge;
-
-    doge = meliante;
-    std::cout << "this animal make sound: ";
-    doge.makeSound();
-    std::cout << "Animal type is: " << doge.getType() << std::endl;
+    doge.getBrain()->setIdea(9, "Should i catch the ball??");
+    Dog caramel = doge;
+    std::cout << "Idea from doge: " << doge.getBrain()->getIdea(9) << std::endl;
+    std::cout << "Idea from caramel: " << caramel.getBrain()->getIdea(9) << std::endl;
   }
   return EXIT_SUCCESS;
 }
