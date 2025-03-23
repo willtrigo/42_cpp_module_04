@@ -6,7 +6,7 @@
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/20 19:01:56 by dande-je          #+#    #+#             */
-/*   Updated: 2025/03/22 20:55:57 by dande-je         ###   ########.fr       */
+/*   Updated: 2025/03/23 11:03:27 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,8 +35,8 @@ int main() {
   }
   std::cout << std::endl << "---------------------------------------------------" << std::endl << std::endl;
   {
-    Cat meliante;
-    Animal* kazul = new Cat(meliante);
+    Cat crocodile;
+    Animal* kazul = new Cat(crocodile);
     std::cout << "this animal make sound: ";
     kazul->makeSound();
     std::cout << "Animal type is: " << kazul->getType() << std::endl;
@@ -44,10 +44,10 @@ int main() {
   }
   std::cout << std::endl << "---------------------------------------------------" << std::endl << std::endl;
   {
-    Cat meliante;
+    Cat crocodile;
     Cat kazul;
 
-    kazul = meliante;
+    kazul = crocodile;
     std::cout << "this animal make sound: ";
     kazul.makeSound();
     std::cout << "Animal type is: " << kazul.getType() << std::endl;
@@ -61,8 +61,8 @@ int main() {
   }
   std::cout << std::endl << "---------------------------------------------------" << std::endl << std::endl;
   {
-    Dog meliante;
-    Animal* doge = new Dog(meliante);
+    Dog crocodile;
+    Animal* doge = new Dog(crocodile);
     std::cout << "this animal make sound: ";
     doge->makeSound();
     std::cout << "Animal type is: " << doge->getType() << std::endl;
@@ -70,10 +70,10 @@ int main() {
   }
   std::cout << std::endl << "---------------------------------------------------" << std::endl << std::endl;
   {
-    Dog meliante;
+    Dog crocodile;
     Dog doge;
 
-    doge = meliante;
+    doge = crocodile;
     std::cout << "this animal make sound: ";
     doge.makeSound();
     std::cout << "Animal type is: " << doge.getType() << std::endl;
@@ -95,8 +95,8 @@ int main() {
   }
   std::cout << std::endl << "---------------------------------------------------" << std::endl << std::endl;
   {
-    WrongCat meliante;
-    WrongAnimal* kazul = new WrongCat(meliante);
+    WrongCat crocodile;
+    WrongAnimal* kazul = new WrongCat(crocodile);
     std::cout << "this animal make sound: ";
     kazul->makeSound();
     std::cout << "Animal type is: " << kazul->getType() << std::endl;
@@ -104,10 +104,10 @@ int main() {
   }
   std::cout << std::endl << "---------------------------------------------------" << std::endl << std::endl;
   {
-    WrongCat meliante;
+    WrongCat crocodile;
     WrongCat kazul;
 
-    kazul = meliante;
+    kazul = crocodile;
     std::cout << "this animal make sound: ";
     kazul.makeSound();
     std::cout << "Animal type is: " << kazul.getType() << std::endl;
