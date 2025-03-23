@@ -6,12 +6,12 @@
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/21 17:18:36 by dande-je          #+#    #+#             */
-/*   Updated: 2025/03/22 20:05:03 by dande-je         ###   ########.fr       */
+/*   Updated: 2025/03/22 20:36:38 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "core/polymorphic/Dog.hpp"
 #include "core/polymorphic/Animal.hpp"
+#include "core/polymorphic/Dog.hpp"
 #include "utils/TerminalColor.hpp"
 
 Dog::Dog() {

@@ -6,12 +6,12 @@
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/21 17:18:22 by dande-je          #+#    #+#             */
-/*   Updated: 2025/03/22 19:52:03 by dande-je         ###   ########.fr       */
+/*   Updated: 2025/03/22 20:36:30 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "core/polymorphic/Cat.hpp"
 #include "core/polymorphic/Animal.hpp"
+#include "core/polymorphic/Cat.hpp"
 #include "utils/TerminalColor.hpp"
 
 Cat::Cat() {
