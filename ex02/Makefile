@@ -6,7 +6,7 @@
 #    By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/03/23 11:37:46 by dande-je          #+#    #+#              #
-#    Updated: 2025/03/23 12:07:03 by dande-je         ###   ########.fr        #
+#    Updated: 2025/03/24 21:38:53 by dande-je         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -85,7 +85,7 @@ COMP_MESSAGE                    = Building CPP object
 #******************************************************************************#
 
 CC                             := c++
-CFLAGS                         = -Wall -Wextra -Werror -Ofast -Wunreachable-code -Wpedantic -std=c++98
+CFLAGS                         = -Wall -Wextra -Werror -Wshadow -Ofast -Wunreachable-code -Wpedantic -std=c++98
 CPPFLAGS                       := $(addprefix -I,$(INCS)) -MMD -MP
 DFLAGS                         := -Wall -Wextra -Werror -g3 -std=c++98
 LFLAGS                         := -march=native
