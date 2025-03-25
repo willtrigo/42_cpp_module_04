@@ -6,7 +6,7 @@
 #    By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/03/24 21:49:56 by dande-je          #+#    #+#              #
-#    Updated: 2025/03/24 22:18:10 by dande-je         ###   ########.fr        #
+#    Updated: 2025/03/25 17:44:58 by dande-je         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -54,7 +54,8 @@ NAME                            = $(BIN_DIR)$(NAME_OUTPUT)
 
 SRCS_FILES                      += $(addprefix $(SRCS_MAIN_DIR), main.cpp)
 SRCS_FILES                      += $(addprefix $(SRCS_ENTITIES_DIR), AMateria.cpp \
-								   Character.cpp)
+								   Character.cpp \
+								   CharacterUtility.cpp)
 SRCS_FILES                      += $(addprefix $(SRCS_MATERIALS_DIR), Cure.cpp \
 								   Ice.cpp)
 SRCS_FILES                      += $(addprefix $(SRCS_SERVICES_DIR), MateriaSource.cpp)
