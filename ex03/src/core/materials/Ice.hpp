@@ -1,27 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Ice.cpp                                            :+:      :+:    :+:   */
+/*   Ice.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/26 22:49:58 by dande-je          #+#    #+#             */
-/*   Updated: 2025/03/27 11:00:16 by dande-je         ###   ########.fr       */
+/*   Created: 2025/03/26 22:50:01 by dande-je          #+#    #+#             */
+/*   Updated: 2025/03/26 22:57:02 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "core/materials/Ice.hpp"
+#ifndef ICE_HPP
+#define ICE_HPP
+
 #include "core/entities/AMateria.hpp"
+#include "core/interfaces/ICharacter.hpp"
 
-Ice::Ice() : AMateria("ice") {}
+class Ice : public AMateria {
+ public:
+  Ice();
+  Ice(const Ice& other);
+  virtual ~Ice();
 
-Ice::Ice(const Ice& other) : AMateria(other) {}
+  Ice& operator=(const Ice& other);
 
-Ice::~Ice() {}
+  virtual AMateria* clone() const;
+  virtual void use(ICharacter& target);
+};
 
-Ice& Ice::operator=(const Ice& other) {
-  if(this != &other) {
-    this->m_type = other.m_type;
-  }
-  return *this;
-}
+#endif // ICE_HPP

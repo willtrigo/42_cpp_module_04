@@ -1,27 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Ice.cpp                                            :+:      :+:    :+:   */
+/*   CureUtility.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/26 22:49:58 by dande-je          #+#    #+#             */
-/*   Updated: 2025/03/27 11:00:16 by dande-je         ###   ########.fr       */
+/*   Created: 2025/03/25 18:08:59 by dande-je          #+#    #+#             */
+/*   Updated: 2025/03/25 18:46:47 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "core/materials/Ice.hpp"
 #include "core/entities/AMateria.hpp"
+#include "core/interfaces/ICharacter.hpp"
+#include "core/materials/Cure.hpp"
+#include <iostream>
 
-Ice::Ice() : AMateria("ice") {}
+AMateria* Cure::clone() const {
+  return new Cure(*this);
+}
 
-Ice::Ice(const Ice& other) : AMateria(other) {}
-
-Ice::~Ice() {}
-
-Ice& Ice::operator=(const Ice& other) {
-  if(this != &other) {
-    this->m_type = other.m_type;
-  }
-  return *this;
+void Cure::use(ICharacter& target) {
+  std::cout << "* heals " << target.getName() << "'s wounds *" << std::endl;
 }

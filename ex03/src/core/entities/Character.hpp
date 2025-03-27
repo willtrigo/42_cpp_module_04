@@ -6,7 +6,7 @@
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/24 22:13:03 by dande-je          #+#    #+#             */
-/*   Updated: 2025/03/25 17:30:58 by dande-je         ###   ########.fr       */
+/*   Updated: 2025/03/25 18:42:28 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ class Character : public ICharacter {
 
   Character& operator=(const Character& other);
 
-  const std::string& getName() const;
+  std::string const & getName() const;
   void equip(AMateria* m);
   void unequip(int idx);
   void use(int idx, ICharacter& target);
