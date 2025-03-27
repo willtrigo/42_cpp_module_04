@@ -6,7 +6,7 @@
 #    By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/03/24 21:49:56 by dande-je          #+#    #+#              #
-#    Updated: 2025/03/25 17:44:58 by dande-je         ###   ########.fr        #
+#    Updated: 2025/03/27 11:49:20 by dande-je         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -58,7 +58,8 @@ SRCS_FILES                      += $(addprefix $(SRCS_ENTITIES_DIR), AMateria.cp
 								   CharacterUtility.cpp)
 SRCS_FILES                      += $(addprefix $(SRCS_MATERIALS_DIR), Cure.cpp \
 								   Ice.cpp)
-SRCS_FILES                      += $(addprefix $(SRCS_SERVICES_DIR), MateriaSource.cpp)
+SRCS_FILES                      += $(addprefix $(SRCS_SERVICES_DIR), MateriaSource.cpp \
+								   MateriaSourceUtility.cpp)
 SRCS_FILES                      += $(addprefix $(SRCS_UTILS_DIR), TerminalColor.cpp \
 								   TerminalColorUtility.cpp)
 
