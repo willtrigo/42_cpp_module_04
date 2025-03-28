@@ -6,7 +6,7 @@
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/24 22:13:00 by dande-je          #+#    #+#             */
-/*   Updated: 2025/03/27 20:26:08 by dande-je         ###   ########.fr       */
+/*   Updated: 2025/03/28 19:59:27 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ Character::Character(const std::string& name)
 
 Character::Character(const Character& other)
   : m_color(TerminalColor::getInstance()),
-  m_name(other.m_name) {
+    m_name(other.m_name) {
   this->m_bgColor = BG_PURPLE;
   this->m_strColor = BLACK;
   log("Copy Character constructor called");

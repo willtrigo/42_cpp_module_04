@@ -6,7 +6,7 @@
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/24 22:16:12 by dande-je          #+#    #+#             */
-/*   Updated: 2025/03/27 11:34:52 by dande-je         ###   ########.fr       */
+/*   Updated: 2025/03/28 19:30:45 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,11 @@ class MateriaSource : public IMateriaSource {
   };
 
   AMateria* m_learnedMaterias[LEARNED_MATERIAS_SIZE];
+  const TerminalColor& m_color;
+  BgColor m_bgColor;
+  StrColor m_strColor;
+
+  void log(const std::string& str) const;
 };
 
 #endif // MATERIAL_SOURCE_HPP

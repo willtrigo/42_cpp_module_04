@@ -6,7 +6,7 @@
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/25 17:59:53 by dande-je          #+#    #+#             */
-/*   Updated: 2025/03/27 20:28:40 by dande-je         ###   ########.fr       */
+/*   Updated: 2025/03/28 20:08:44 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,8 +38,6 @@ Cure& Cure::operator=(const Cure& other) {
     this->m_strColor = BLACK;
     log("Copy assignment Cure operator called");
     this->m_type = other.m_type;
-    this->m_bgColor = BG_GREEN;
-    this->m_strColor = BLACK;
   }
   return *this;
 }
