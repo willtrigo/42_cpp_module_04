@@ -6,7 +6,7 @@
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/24 22:13:03 by dande-je          #+#    #+#             */
-/*   Updated: 2025/03/25 18:42:28 by dande-je         ###   ########.fr       */
+/*   Updated: 2025/03/27 20:11:13 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,13 @@ class Character : public ICharacter {
   void unequip(int idx);
   void use(int idx, ICharacter& target);
 
+ protected:
+  const TerminalColor& m_color;
+  BgColor m_bgColor;
+  StrColor m_strColor;
+
+  void log(const std::string& str) const;
+
  private:
   enum characterEnum{
     INVENTORY_SIZE = 4
@@ -37,6 +44,8 @@ class Character : public ICharacter {
 
   std::string m_name;
   AMateria* m_inventory[INVENTORY_SIZE];
+
+  Character();
 };
 
 #endif // CHARACTER_HPP

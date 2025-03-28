@@ -1,26 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   CureUtility.cpp                                    :+:      :+:    :+:   */
+/*   AMateriaUtility.cpp                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/25 18:08:59 by dande-je          #+#    #+#             */
-/*   Updated: 2025/03/27 20:30:36 by dande-je         ###   ########.fr       */
+/*   Created: 2025/03/27 19:45:26 by dande-je          #+#    #+#             */
+/*   Updated: 2025/03/27 19:50:46 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "core/entities/AMateria.hpp"
-#include "core/interfaces/ICharacter.hpp"
-#include "core/materials/Cure.hpp"
-#include "utils/TerminalColor.hpp"
+#include <iostream>
+#include <string>
 
-AMateria* Cure::clone() const {
-  return new Cure(*this);
+const std::string& AMateria::getType() const {
+  return this->m_type;
 }
 
-void Cure::use(ICharacter& target) {
-  this->m_bgColor = BG_RESET;
-  this->m_strColor = GREEN;
-  log("* heals "+ target.getName() + "'s wounds *");
+void AMateria::log(const std::string& str) const {
+  std::cout << this->m_color.setColor(this->m_bgColor, this->m_strColor, str) << std::endl;
 }
