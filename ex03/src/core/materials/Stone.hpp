@@ -1,26 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   CureUtility.cpp                                    :+:      :+:    :+:   */
+/*   Stone.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/25 18:08:59 by dande-je          #+#    #+#             */
-/*   Updated: 2025/03/28 20:42:32 by dande-je         ###   ########.fr       */
+/*   Created: 2025/03/28 20:29:57 by dande-je          #+#    #+#             */
+/*   Updated: 2025/03/28 20:45:18 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef STONE_HPP
+#define STONE_HPP
+
 #include "core/entities/AMateria.hpp"
 #include "core/interfaces/ICharacter.hpp"
-#include "core/materials/Cure.hpp"
-#include "utils/TerminalColor.hpp"
 
-AMateria* Cure::clone() const {
-  return new Cure(*this);
-}
+class Stone : public AMateria {
+ public:
+  Stone();
+  Stone(const Stone& other);
+  virtual ~Stone();
 
-void Cure::use(ICharacter& target) {
-  this->m_bgColor = BG_RESET;
-  this->m_strColor = GREEN;
-  log("* heals " + target.getName() + "'s wounds *");
-}
+  Stone& operator=(const Stone& other);
+
+  virtual AMateria* clone() const;
+  virtual void use(ICharacter& target);
+};
+
+#endif // STONE_HPP

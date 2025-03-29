@@ -1,42 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Ice.cpp                                            :+:      :+:    :+:   */
+/*   Stone.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/26 22:49:58 by dande-je          #+#    #+#             */
-/*   Updated: 2025/03/28 20:46:27 by dande-je         ###   ########.fr       */
+/*   Created: 2025/03/28 20:29:55 by dande-je          #+#    #+#             */
+/*   Updated: 2025/03/28 20:53:31 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "core/materials/Ice.hpp"
+#include "core/materials/Stone.hpp"
 #include "core/entities/AMateria.hpp"
 #include "utils/TerminalColor.hpp"
 
-Ice::Ice() : AMateria("ice") {
-  this->m_bgColor = BG_CYAN;
+Stone::Stone() : AMateria("stone") {
+  this->m_bgColor = BG_ORANGE;
   this->m_strColor = BLACK;
-  log("Default Ice constructor called");
+  log("Default Stone constructor called");
 }
 
-Ice::Ice(const Ice& other) : AMateria(other) {
-  this->m_bgColor = BG_CYAN;
+Stone::Stone(const Stone& other) : AMateria(other) {
+  this->m_bgColor = BG_ORANGE;
   this->m_strColor = BLACK;
-  log("Copy Ice constructor called");
+  log("Copy Stone constructor called");
 }
 
-Ice::~Ice() {
-  this->m_bgColor = BG_CYAN;
+Stone::~Stone() {
+  this->m_bgColor = BG_ORANGE;
   this->m_strColor = BLACK;
-  log("Destructor Ice called");
+  log("Destructor Stone called");
 }
 
-Ice& Ice::operator=(const Ice& other) {
+Stone& Stone::operator=(const Stone& other) {
   if(this != &other) {
-    this->m_bgColor = BG_CYAN;
+    this->m_bgColor = BG_ORANGE;
     this->m_strColor = BLACK;
-    log("Copy assignment Ice operator called");
+    log("Copy assignment Stone operator called");
     this->m_type = other.m_type;
   }
   return *this;

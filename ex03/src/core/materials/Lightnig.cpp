@@ -1,42 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Ice.cpp                                            :+:      :+:    :+:   */
+/*   Lightnig.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/26 22:49:58 by dande-je          #+#    #+#             */
-/*   Updated: 2025/03/28 20:46:27 by dande-je         ###   ########.fr       */
+/*   Created: 2025/03/28 20:29:15 by dande-je          #+#    #+#             */
+/*   Updated: 2025/03/28 20:53:24 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "core/materials/Ice.hpp"
+#include "core/materials/Lightnig.hpp"
 #include "core/entities/AMateria.hpp"
 #include "utils/TerminalColor.hpp"
 
-Ice::Ice() : AMateria("ice") {
-  this->m_bgColor = BG_CYAN;
+Lightnig::Lightnig() : AMateria("lightnig") {
+  this->m_bgColor = BG_YELLOW;
   this->m_strColor = BLACK;
-  log("Default Ice constructor called");
+  log("Default Lightnig constructor called");
 }
 
-Ice::Ice(const Ice& other) : AMateria(other) {
-  this->m_bgColor = BG_CYAN;
+Lightnig::Lightnig(const Lightnig& other) : AMateria(other) {
+  this->m_bgColor = BG_YELLOW;
   this->m_strColor = BLACK;
-  log("Copy Ice constructor called");
+  log("Copy Lightnig constructor called");
 }
 
-Ice::~Ice() {
-  this->m_bgColor = BG_CYAN;
+Lightnig::~Lightnig() {
+  this->m_bgColor = BG_YELLOW;
   this->m_strColor = BLACK;
-  log("Destructor Ice called");
+  log("Destructor Lightnig called");
 }
 
-Ice& Ice::operator=(const Ice& other) {
-  if(this != &other) {
-    this->m_bgColor = BG_CYAN;
+Lightnig& Lightnig::operator=(const Lightnig& other) {
+  if (this != &other) {
+    this->m_bgColor = BG_YELLOW;
     this->m_strColor = BLACK;
-    log("Copy assignment Ice operator called");
+    log("Copy assignment Lightnig operator called");
     this->m_type = other.m_type;
   }
   return *this;

@@ -1,42 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Ice.cpp                                            :+:      :+:    :+:   */
+/*   Fire.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/26 22:49:58 by dande-je          #+#    #+#             */
-/*   Updated: 2025/03/28 20:46:27 by dande-je         ###   ########.fr       */
+/*   Created: 2025/03/28 20:30:16 by dande-je          #+#    #+#             */
+/*   Updated: 2025/03/28 20:53:05 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "core/materials/Ice.hpp"
+#include "core/materials/Fire.hpp"
 #include "core/entities/AMateria.hpp"
 #include "utils/TerminalColor.hpp"
 
-Ice::Ice() : AMateria("ice") {
-  this->m_bgColor = BG_CYAN;
+Fire::Fire() : AMateria("fire") {
+  this->m_bgColor = BG_RED;
   this->m_strColor = BLACK;
-  log("Default Ice constructor called");
+  log("Default Fire constructor called");
 }
 
-Ice::Ice(const Ice& other) : AMateria(other) {
-  this->m_bgColor = BG_CYAN;
+Fire::Fire(const Fire& other) : AMateria(other) {
+  this->m_bgColor = BG_RED;
   this->m_strColor = BLACK;
-  log("Copy Ice constructor called");
+  log("Copy Fire constructor called");
 }
 
-Ice::~Ice() {
-  this->m_bgColor = BG_CYAN;
+Fire::~Fire() {
+  this->m_bgColor = BG_RED;
   this->m_strColor = BLACK;
-  log("Destructor Ice called");
+  log("Destructor Fire called");
 }
 
-Ice& Ice::operator=(const Ice& other) {
-  if(this != &other) {
-    this->m_bgColor = BG_CYAN;
+Fire& Fire::operator=(const Fire& other) {
+  if (this != &other) {
+    this->m_bgColor = BG_RED;
     this->m_strColor = BLACK;
-    log("Copy assignment Ice operator called");
+    log("Copy assignment Fire operator called");
     this->m_type = other.m_type;
   }
   return *this;
